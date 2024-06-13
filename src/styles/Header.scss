@@ -1,0 +1,28 @@
+.header {
+  padding: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  height: 68px;
+  margin: 20px;
+}
+
+.header__navbar {
+  list-style: none;
+  display: flex;
+  justify-content: space-around;
+  font-size: 24px;
+  font-weight: 500;
+}
+.header__logo {
+  height: fit-content;
+}
+.navbar-active {
+  text-decoration: none;
+  color: black;
+}
+nav li {
+  margin-left: 1em;
+  text-decoration: none;
+  color: black;
+}
