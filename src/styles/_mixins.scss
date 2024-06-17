@@ -1,0 +1,7 @@
+@mixin text($color, $deco) {
+  color: $color;
+  font-size: 24px;
+  font-weight: 500;
+  text-decoration: $deco;
+  font-family: "Montserrat", sans-serif;
+}

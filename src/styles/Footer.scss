@@ -1,0 +1,16 @@
+@import "../styles/mixins";
+footer {
+  background-color: black;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 66px 0 29px 0;
+  gap: 29px;
+  p {
+    @include text(white, none);
+  }
+}
+.footer__logo {
+  height: 39px;
+  width: 122px;
+}

@@ -1,0 +1,18 @@
+@import "../styles/mixins";
+.banner {
+  padding: 0 100px 43px 100px;
+  border-radius: 25%;
+}
+.banner__img {
+  opacity: 60%;
+  object-fit: cover;
+  mix-blend-mode: darken;
+  z-index: 0;
+}
+.banner__text {
+  @include text(white, none);
+  -webkit-text-stroke: 1px black;
+  font-size: 48px;
+  font-weight: 700;
+  z-index: 1;
+}

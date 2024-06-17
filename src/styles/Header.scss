@@ -1,33 +1,25 @@
-$textColor: black;
-
+@import "../styles/mixins";
 .header {
-  padding: 1em;
   display: flex;
   flex-direction: row;
   justify-content: space-between;
   height: 68px;
-  margin: 20px;
+  margin: 45px 100px 50px 100px;
 }
 
 .header__navbar {
   list-style: none;
   display: flex;
   justify-content: space-around;
+  gap: 57px;
   font-size: 24px;
-  font-weight: 500;
 }
 .header__logo {
   height: fit-content;
 }
 .header__navbar-active {
-  text-decoration-line: underline;
-  color: $textColor;
+  @include text(black, underline);
 }
 .header__navbar-inactive {
-  text-decoration-line: none;
-  color: $textColor;
-}
-nav li {
-  margin-left: 1em;
-  color: black;
+  @include text(black, none);
 }
