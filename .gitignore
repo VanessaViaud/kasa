@@ -5,6 +5,10 @@
 /.pnp
 .pnp.js
 
+
+# assets
+/src/assets/figma
+
 # testing
 /coverage
 
