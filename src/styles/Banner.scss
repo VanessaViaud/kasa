@@ -1,18 +1,30 @@
 @import "../styles/mixins";
 .banner {
   padding: 0 100px 43px 100px;
-  border-radius: 25%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 .banner__img {
-  opacity: 60%;
   object-fit: cover;
-  mix-blend-mode: darken;
-  z-index: 0;
+  z-index: 100;
+  width: 100%;
+  border-radius: 25px;
+  height: 223px;
+}
+
+.banner__img.cliff {
+  filter: brightness(40%);
+  box-shadow: 0 0 10px 0 rgba(0, 4, 0, 4);
+}
+
+.banner__img.mountain {
+  filter: brightness(70%);
 }
 .banner__text {
-  @include text(white, none);
-  -webkit-text-stroke: 1px black;
-  font-size: 48px;
-  font-weight: 700;
-  z-index: 1;
+  @include text(48px, 700, white, none);
+  z-index: 200;
+  position: absolute;
+  text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
+    -1px 1px 0 #000;
 }

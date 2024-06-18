@@ -18,8 +18,8 @@
   height: fit-content;
 }
 .header__navbar-active {
-  @include text(black, underline);
+  @include text(24px, 500, black, underline);
 }
 .header__navbar-inactive {
-  @include text(black, none);
+  @include text(24px, 500, black, none);
 }

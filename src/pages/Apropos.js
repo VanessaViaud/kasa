@@ -1,9 +1,9 @@
 import React from "react";
-import Banner from "../components/Banner";
+import BannerAbout from "../components/BannerAbout";
 const Apropos = () => {
   return (
     <div>
-      <Banner />
+      <BannerAbout />
 
       <p>Ce sont les a propos</p>
     </div>

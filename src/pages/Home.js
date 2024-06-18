@@ -1,10 +1,10 @@
 import React from "react";
-import Banner from "../components/Banner";
+import BannerHome from "../components/BannerHome.js";
 
 const Home = () => {
   return (
     <div>
-      <Banner />
+      <BannerHome />
       <p>c'est l'accueil</p>
     </div>
   );

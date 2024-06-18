@@ -1,0 +1,19 @@
+@import "../styles/mixins";
+.error-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 170px;
+  padding: 140px;
+}
+h1 {
+  margin: 0;
+  @include text(288px, 700, #ff6060, none);
+}
+p {
+  margin: 0;
+  @include text(36px, 500, #ff6060, none);
+}
+a {
+  @include text(18px, 500, black, underline);
+}
