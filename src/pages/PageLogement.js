@@ -1,6 +1,6 @@
 import React from "react";
 
-const FicheLogement = () => {
+const PageLogement = () => {
   return (
     <div>
       <p>pour les fiches logements</p>
@@ -8,4 +8,4 @@ const FicheLogement = () => {
   );
 };
 
-export default FicheLogement;
+export default PageLogement;
