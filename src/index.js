@@ -3,6 +3,10 @@ import ReactDOM from "react-dom/client";
 import "./index.scss";
 import App from "./components/App";
 import reportWebVitals from "./reportWebVitals";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { faAngleUp, faAngleDown } from "@fortawesome/free-solid-svg-icons";
+
+library.add(faAngleUp, faAngleDown);
 
 const root = ReactDOM.createRoot(document.getElementById("root"));
 root.render(

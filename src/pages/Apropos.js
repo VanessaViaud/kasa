@@ -1,11 +1,11 @@
 import React from "react";
 import BannerAbout from "../components/BannerAbout";
+import CollapseContent from "../components/CollapseContent";
 const Apropos = () => {
   return (
     <div>
       <BannerAbout />
-
-      <p>Ce sont les a propos</p>
+      <CollapseContent />
     </div>
   );
 };
