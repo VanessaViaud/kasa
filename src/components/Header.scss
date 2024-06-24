@@ -1,4 +1,4 @@
-@import "../styles/mixins";
+@import "../components/mixins";
 .header {
   display: flex;
   flex-direction: row;
@@ -18,8 +18,8 @@
   height: fit-content;
 }
 .header__navbar-active {
-  @include text(24px, 500, black, underline);
+  @include text(24px, 500, black, underline, $main-font);
 }
 .header__navbar-inactive {
-  @include text(24px, 500, black, none);
+  @include text(24px, 500, black, none, $main-font);
 }

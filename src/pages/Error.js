@@ -1,7 +1,7 @@
 import React from "react";
 import { Link } from "react-router-dom";
-import "../styles/Erreur.scss";
-function Erreur() {
+import "../components/Error.scss";
+function Error() {
   return (
     <div className="error-page">
       <h1>404</h1>
@@ -11,4 +11,4 @@ function Erreur() {
   );
 }
 
-export default Erreur;
+export default Error;

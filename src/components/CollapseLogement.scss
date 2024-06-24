@@ -1,4 +1,4 @@
-@import "../styles/mixins";
+@import "../components/mixins";
 .collapse-logement__container {
   display: flex;
   flex-direction: row;
@@ -11,11 +11,11 @@
   flex-direction: column;
   &--text {
     text-align: start;
-    @include text(18px, 400, black, none);
+    @include text(18px, 400, black, none, $main-font);
   }
   &__button {
     z-index: 200;
-    background-color: #ff6060;
+    background-color: $main-color;
     color: white;
     border: none;
     padding: 10px;
@@ -23,7 +23,7 @@
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    @include text(18px, 700, white, none);
+    @include text(18px, 700, white, none, $main-font);
     width: 100%;
   }
   &__arrow {
@@ -39,8 +39,14 @@
     padding: 20px;
     border-radius: 0 0 5px 5px;
     margin-top: -5px;
+    overflow: hidden;
+    height: 0;
+    transition: height 300ms;
     &--text {
-      @include text(18px, 400, black, none);
+      @include text(18px, 400, black, none, $main-font);
+    }
+    &.open {
+      height: auto;
     }
   }
 }

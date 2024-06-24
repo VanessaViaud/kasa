@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import logementsData from "../datas/logements.json";
-import "../styles/Card.scss";
+import "../components/Card.scss";
 
 function Card() {
   const [logements, setLogements] = useState([]);

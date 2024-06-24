@@ -1,6 +1,6 @@
 import React from "react";
 import logo from "../assets/LOGO.png";
-import "../styles/Header.scss";
+import "../components/Header.scss";
 import { NavLink } from "react-router-dom";
 
 function Header() {
@@ -20,7 +20,7 @@ function Header() {
         </li>
         <li>
           <NavLink
-            to="/apropos"
+            to="/about"
             className={({ isActive }) =>
               isActive ? "header__navbar-active" : "header__navbar-inactive"
             }

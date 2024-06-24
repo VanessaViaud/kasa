@@ -1,4 +1,4 @@
-@import "../styles/mixins";
+@import "../components/mixins";
 .collapse__container {
   display: flex;
   align-items: center;
@@ -13,11 +13,11 @@
   align-items: center;
   &--text {
     text-align: start;
-    @include text(18px, 400, black, none);
+    @include text(18px, 400, black, none, $main-font);
   }
   &__button {
     z-index: 200;
-    background-color: #ff6060;
+    background-color: $main-color;
     color: white;
     border: none;
     padding: 10px;
@@ -25,7 +25,7 @@
     cursor: pointer;
     display: flex;
     justify-content: space-between;
-    @include text(24px, 700, white, none);
+    @include text(24px, 700, white, none, $main-font);
     width: 100%;
   }
   &__arrow {
@@ -42,7 +42,7 @@
     border-radius: 0 0 5px 5px;
     margin-top: -5px;
     &--text {
-      @include text(18px, 400, black, none);
+      @include text(18px, 400, black, none, $main-font);
     }
   }
 }

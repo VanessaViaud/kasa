@@ -1,0 +1,9 @@
+$main-color: #ff6060;
+$main-font: "Montserrat", sans-serif;
+@mixin text($size, $weight, $color, $deco, $font) {
+  color: $color;
+  font-size: $size;
+  font-weight: $weight;
+  text-decoration: $deco;
+  font-family: $font;
+}

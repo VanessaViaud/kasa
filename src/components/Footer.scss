@@ -1,4 +1,4 @@
-@import "../styles/mixins";
+@import "../components/mixins";
 footer {
   box-sizing: border-box;
   height: 209px;
@@ -9,7 +9,7 @@ footer {
   padding: 66px 0 29px 0;
   gap: 29px;
   p {
-    @include text(24px, 500, white, none);
+    @include text(24px, 500, white, none, $main-font);
   }
 }
 .footer__logo {

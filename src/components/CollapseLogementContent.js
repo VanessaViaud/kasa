@@ -1,9 +1,10 @@
 import React from "react";
+import { Redirect } from "react-router-dom";
 import CollapseLogement from "../components/CollapseLogement";
 
 function CollapseLogementContent({ logement }) {
   if (!logement) {
-    return <div>Logement not found</div>;
+    return <Redirect to="/error" />;
   }
 
   return (

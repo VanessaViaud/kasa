@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import "../styles/CollapseLogement.scss";
+import "../components/CollapseLogement.scss";
 
 function CollapseLogement({ title, children }) {
   const [isOpen, setIsOpen] = useState(false);
@@ -18,7 +18,11 @@ function CollapseLogement({ title, children }) {
           className={`collapse-logement__arrow ${isOpen ? "open" : ""}`}
         />
       </button>
-      {isOpen && <div className="collapse-logement__content">{children}</div>}
+      {isOpen && (
+        <div className={`collapse-logement__content ${isOpen ? "open" : ""}`}>
+          {children}
+        </div>
+      )}
     </div>
   );
 }
