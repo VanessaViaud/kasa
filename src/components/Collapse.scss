@@ -6,8 +6,20 @@
   gap: 30px;
   margin: 38px 100px 38px 100px;
 }
+.collapse-logement__container {
+  display: flex;
+  flex-direction: row;
+  gap: 80px;
+  margin: 25px 100px 50px 100px;
+}
 .collapse {
   width: 80%;
+}
+.collapse-logement {
+  width: 100%;
+}
+.collapse,
+.collapse-logement {
   display: flex;
   flex-direction: column;
   align-items: center;

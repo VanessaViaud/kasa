@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "../components/Banner";
-import CollapseContent from "../components/CollapseContent";
+import Collapse from "../components/Collapse";
 import Mountain from "../assets/Banner_2.png";
 const About = () => {
   return (
@@ -12,7 +12,11 @@ const About = () => {
         classimg="banner__img banner__img--mountain"
         classtext="banner__text"
       />
-      <CollapseContent />
+      <Collapse
+        classGen="collapse"
+        classContainer="collapse__container"
+        visibleSection="about"
+      />{" "}
     </div>
   );
 };
