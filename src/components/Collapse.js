@@ -60,15 +60,13 @@ function Collapse({ classGen, classContainer, logement, visibleSection }) {
             }`}
           />
         </button>
-        {openIndices.includes(index) && (
-          <div
-            className={`collapse__content ${
-              openIndices.includes(index) ? "open" : ""
-            }`}
-          >
-            {section.content}
-          </div>
-        )}
+        <div
+          className={`collapse__content ${
+            openIndices.includes(index) ? "open" : "close"
+          }`}
+        >
+          {section.content}
+        </div>
       </div>
     ));
   };
