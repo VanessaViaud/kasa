@@ -1,0 +1,57 @@
+@import "../components/mixins";
+.fiche-logement {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  margin: 50px 100px 50px 100px;
+  &__left,
+  &__right {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    height: 120px;
+  }
+
+  &__title {
+    @include text(36px, 500, $main-color, none, $main-font);
+  }
+  &__location {
+    @include text(18px, 500, black, none, $main-font);
+  }
+  &__tags {
+    @include text(14px, 700, white, none, $main-font);
+    display: flex;
+    gap: 10px;
+    flex-direction: row;
+
+    &__ind {
+      background-color: $main-color;
+      border-radius: 10px;
+      height: 25px;
+      min-width: 115px;
+      margin: 20px 0 20px 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+  }
+  &__host {
+    display: flex;
+    flex-direction: row;
+    justify-content: end;
+    max-width: 195px;
+    gap: 10px;
+    &__name {
+      @include text(18px, 500, $main-color, none, $main-font);
+      display: flex;
+      flex-direction: column;
+      text-align: right;
+      justify-content: center;
+    }
+    &__picture {
+      width: 64px;
+      height: 64px;
+      border-radius: 50%;
+    }
+  }
+}

@@ -5,7 +5,7 @@ import { useNavigate } from "react-router-dom";
 import "../components/Collapse.scss";
 
 function Collapse({ classGen, classContainer, logement, visibleSection }) {
-  const [openIndex, setOpenIndex] = useState(null);
+  const [openIndices, setOpenIndices] = useState([]);
   const navigate = useNavigate();
 
   if (!logement && visibleSection !== "about") {
@@ -14,7 +14,11 @@ function Collapse({ classGen, classContainer, logement, visibleSection }) {
   }
 
   const toggleCollapse = (index) => {
-    setOpenIndex(openIndex === index ? null : index);
+    setOpenIndices((prevIndices) =>
+      prevIndices.includes(index)
+        ? prevIndices.filter((i) => i !== index)
+        : [...prevIndices, index]
+    );
   };
 
   const logementSections = [
@@ -51,12 +55,16 @@ function Collapse({ classGen, classContainer, logement, visibleSection }) {
           <span className="collapse__title">{section.title}</span>
           <FontAwesomeIcon
             icon="angle-up"
-            className={`collapse__arrow ${openIndex === index ? "open" : ""}`}
+            className={`collapse__arrow ${
+              openIndices.includes(index) ? "open" : ""
+            }`}
           />
         </button>
-        {openIndex === index && (
+        {openIndices.includes(index) && (
           <div
-            className={`collapse__content ${openIndex === index ? "open" : ""}`}
+            className={`collapse__content ${
+              openIndices.includes(index) ? "open" : ""
+            }`}
           >
             {section.content}
           </div>

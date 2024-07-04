@@ -1,17 +1,4 @@
 @import "../components/mixins";
-.fiche-logement {
-  display: flex;
-  flex-direction: column;
-  margin: 50px 100px 50px 100px;
-
-  &__title {
-    margin-top: 30px;
-    @include text(36px, 500, $main-color, none, $main-font);
-  }
-  &__location {
-    @include text(18px, 500, black, none, $main-font);
-  }
-}
 .slideshow {
   width: 100%;
   height: 415px;
@@ -22,6 +9,17 @@
     height: 100%;
     border-radius: 25px;
     object-fit: cover;
+  }
+  &__counter {
+    position: absolute;
+    display: flex;
+    align-items: end;
+    justify-content: center;
+    width: 100%;
+    height: 415px;
+    padding-bottom: 25px;
+    box-sizing: border-box;
+    @include text(18px, 500, white, none, $main-font);
   }
   &__nav {
     position: absolute;
@@ -37,4 +35,5 @@
   background-color: transparent;
   color: white;
   font-size: 79px;
+  cursor: pointer;
 }

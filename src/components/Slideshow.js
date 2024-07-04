@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../components/Logement.scss";
+import "../components/Slideshow.scss";
 import Icon from "@mdi/react";
 import { mdiChevronRight } from "@mdi/js";
 import { mdiChevronLeft } from "@mdi/js";
@@ -24,15 +24,21 @@ function Slideshow({ slides }) {
         src={slides[currentIndex]}
         alt={`Slide ${currentIndex + 1}`}
       />
-
-      <div className="slideshow__nav">
-        <button onClick={prevSlide}>
-          <Icon path={mdiChevronLeft} size={5} />
-        </button>
-        <button onClick={nextSlide}>
-          <Icon path={mdiChevronRight} size={5} />
-        </button>
-      </div>
+      {slides.length > 1 && (
+        <>
+          <div className="slideshow__counter">
+            {currentIndex + 1}/{slides.length}
+          </div>
+          <div className="slideshow__nav">
+            <button onClick={prevSlide}>
+              <Icon path={mdiChevronLeft} size={5} />
+            </button>
+            <button onClick={nextSlide}>
+              <Icon path={mdiChevronRight} size={5} />
+            </button>
+          </div>
+        </>
+      )}
     </div>
   );
 }
