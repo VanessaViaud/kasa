@@ -73,6 +73,7 @@
       flex-direction: row-reverse;
       justify-content: space-between;
       height: auto;
+      margin-top: 15px;
     }
     &__title {
       @include text(18px, 500, $main-color, none, $main-font);
@@ -85,10 +86,14 @@
     }
     &__tags {
       @include text(10px, 700, white, none, $main-font);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 0;
       &__ind {
-        margin: 10px 0 10px 0;
+        margin: 10px 10px 0px 0;
         height: 18px;
         min-width: 84px;
+        border-radius: 5px;
       }
     }
     &__rating {
