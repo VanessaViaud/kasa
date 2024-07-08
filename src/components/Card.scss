@@ -1,5 +1,5 @@
 @import "../components/mixins";
-
+/* variables desktop */
 $card-background-color: #f6f6f6;
 $card-border-radius: 25px;
 $card-padding: 56px 50px 43px 50px;
@@ -7,10 +7,10 @@ $card-margin-x: 100px;
 $card-gap: 55px;
 $card-title-background: linear-gradient(
   180deg,
-  #ffffff 0%,
-  #0a0a0a 42%,
-  #040404 20.5%,
-  #000000 50%
+  rgba(255, 255, 255, 0),
+  rgba(10, 10, 10, 0),
+  rgba(4, 4, 4, 0.2),
+  rgba(0, 0, 0, 0.5)
 );
 $card-title-text-color: white;
 $card-title-text-size: 18px;
@@ -24,56 +24,78 @@ $card-item-border-radius: 10px;
   margin-left: $card-margin-x;
   margin-right: $card-margin-x;
   display: grid;
-  grid-template-columns: repeat(
-    auto-fit,
-    minmax(calc((100% - #{$card-margin-x * 3 - $card-gap * 3}) / 3), 1fr)
-  );
+  grid-template-columns: repeat(3, 1fr);
   gap: $card-gap;
   list-style: none;
   margin-top: 43px;
   margin-bottom: 50px;
-}
-
-.card__item {
   position: relative;
-  border-radius: $card-item-border-radius;
-  overflow: hidden;
-  padding-top: 100%;
+
+  &__item {
+    position: relative;
+    border-radius: $card-item-border-radius;
+    overflow: hidden;
+    padding-top: 100%;
+  }
+
+  &__img {
+    border-radius: $card-item-border-radius;
+    object-fit: cover;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    z-index: 1;
+  }
+
+  &__container {
+    z-index: 2;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: flex-end;
+    justify-content: flex-start;
+    background: $card-title-background;
+    border-radius: $card-item-border-radius;
+    background-color: transparent;
+  }
+
+  &__title {
+    margin-left: 21px;
+    margin-bottom: 27px;
+    @include text(
+      $card-title-text-size,
+      $card-title-text-weight,
+      $card-title-text-color,
+      none,
+      $main-font
+    );
+    text-align: left;
+    position: relative;
+    z-index: 3;
+  }
 }
 
-.card__img {
-  border-radius: $card-item-border-radius;
-  object-fit: cover;
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  z-index: 100;
-}
+@media screen and (max-width: 375px) {
+  .card {
+    padding: 0;
+    margin: 22px 22px 22px 22px;
+    background-color: white;
+    display: flex;
+    flex-direction: column;
+    gap: 22px;
 
-.card__title--container {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: flex;
-  align-items: flex-end;
-  justify-content: flex-start;
-  background: $card-title-background;
-  border-radius: $card-item-border-radius;
-}
+    &__item {
+      height: 255px;
+      padding: 0;
+    }
 
-.card__title {
-  margin-left: 21px;
-  margin-bottom: 27px;
-  @include text(
-    $card-title-text-size,
-    $card-title-text-weight,
-    $card-title-text-color,
-    none,
-    $main-font
-  );
-  z-index: 200;
+    &__img {
+      height: 255px;
+    }
+  }
 }

@@ -5,6 +5,11 @@
   align-items: center;
   gap: 170px;
   padding: 140px;
+  &__text {
+    display: flex;
+    flex-direction: row;
+    gap: 11px;
+  }
 }
 h1 {
   margin: 0;
@@ -16,4 +21,29 @@ p {
 }
 a {
   @include text(18px, 500, black, underline, $main-font);
+}
+@media screen and (max-width: 375px) {
+  .error-page {
+    gap: 113px;
+    padding: 80px 20px 113px 20px;
+    &__text {
+      display: flex;
+      flex-direction: column;
+      gap: 0px;
+    }
+  }
+  h1 {
+    margin: 0;
+    @include text(96px, 700, $main-color, none, $main-font);
+  }
+  p {
+    text-align: center;
+    max-width: 260px;
+    margin: 0;
+    line-height: 26px;
+    @include text(18px, 500, $main-color, none, $main-font);
+  }
+  a {
+    @include text(14px, 500, black, underline, $main-font);
+  }
 }

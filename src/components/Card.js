@@ -23,7 +23,7 @@ function Card() {
                 src={logement.cover}
                 alt={logement.title}
               />
-              <div className="card__title--container">
+              <div className="card__container">
                 <p className="card__title">{logement.title}</p>
               </div>
             </Link>

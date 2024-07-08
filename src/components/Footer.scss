@@ -16,3 +16,15 @@ footer {
   height: 39px;
   width: 122px;
 }
+@media screen and (max-width: 375px) {
+  footer {
+    gap: 20px;
+
+    p {
+      line-height: 17px;
+      width: 122px;
+      text-align: center;
+      @include text(12px, 500, white, none, $main-font);
+    }
+  }
+}

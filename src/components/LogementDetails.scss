@@ -17,9 +17,11 @@
 
   &__title {
     @include text(36px, 500, $main-color, none, $main-font);
+    line-height: 52px;
   }
   &__location {
     @include text(18px, 500, black, none, $main-font);
+    line-height: 26px;
   }
   &__tags {
     @include text(14px, 700, white, none, $main-font);
@@ -55,6 +57,54 @@
       width: 64px;
       height: 64px;
       border-radius: 50%;
+    }
+  }
+}
+@media screen and (max-width: 375px) {
+  .fiche-logement {
+    flex-direction: column;
+    padding: 15px 20px 15px 20px;
+    &__left {
+      flex-direction: column;
+      justify-content: flex-start;
+      height: auto;
+    }
+    &__right {
+      flex-direction: row-reverse;
+      justify-content: space-between;
+      height: auto;
+    }
+    &__title {
+      @include text(18px, 500, $main-color, none, $main-font);
+      line-height: 26px;
+    }
+    &__location {
+      @include text(14px, 500, black, none, $main-font);
+      line-height: 20px;
+      text-align: left;
+    }
+    &__tags {
+      @include text(10px, 700, white, none, $main-font);
+      &__ind {
+        margin: 10px 0 10px 0;
+        height: 18px;
+        min-width: 84px;
+      }
+    }
+    &__rating {
+      display: flex;
+      align-items: center;
+    }
+    &__host {
+      max-width: 135px;
+      gap: 10px;
+      &__name {
+        @include text(12px, 500, $main-color, none, $main-font);
+      }
+      &__picture {
+        width: 32px;
+        height: 32px;
+      }
     }
   }
 }

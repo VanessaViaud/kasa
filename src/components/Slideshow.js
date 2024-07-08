@@ -31,10 +31,28 @@ function Slideshow({ slides }) {
           </div>
           <div className="slideshow__nav">
             <button onClick={prevSlide}>
-              <Icon path={mdiChevronLeft} size={5} />
+              <Icon
+                className="slideshow__nav--desktop"
+                path={mdiChevronLeft}
+                size={5}
+              />
+              <Icon
+                className="slideshow__nav--mobil"
+                path={mdiChevronLeft}
+                size={1.5}
+              />
             </button>
             <button onClick={nextSlide}>
-              <Icon path={mdiChevronRight} size={5} />
+              <Icon
+                className="slideshow__nav--desktop"
+                path={mdiChevronRight}
+                size={5}
+              />
+              <Icon
+                className="slideshow__nav--mobil"
+                path={mdiChevronRight}
+                size={1.5}
+              />
             </button>
           </div>
         </>

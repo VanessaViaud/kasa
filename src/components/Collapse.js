@@ -4,7 +4,7 @@ import data from "../datas/About.json";
 import { useNavigate } from "react-router-dom";
 import "../components/Collapse.scss";
 
-function Collapse({ classGen, classContainer, logement, visibleSection }) {
+function Collapse({ classContainer, logement, visibleSection }) {
   const [openIndices, setOpenIndices] = useState([]);
   const navigate = useNavigate();
 
@@ -47,7 +47,7 @@ function Collapse({ classGen, classContainer, logement, visibleSection }) {
 
   const renderSections = (sections) => {
     return sections.map((section, index) => (
-      <div className={classGen} key={index}>
+      <div className="collapse" key={index}>
         <button
           className="collapse__button"
           onClick={() => toggleCollapse(index)}

@@ -13,3 +13,12 @@
 .star.filled {
   color: $main-color;
 }
+@media screen and (max-width: 375px) {
+  .star-rating {
+    gap: 7px;
+  }
+
+  .star {
+    font-size: 13px;
+  }
+}

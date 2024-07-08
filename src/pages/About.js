@@ -12,11 +12,7 @@ const About = () => {
         classimg="banner__img banner__img--mountain"
         classtext="banner__text"
       />
-      <Collapse
-        classGen="collapse"
-        classContainer="collapse__container"
-        visibleSection="about"
-      />{" "}
+      <Collapse classContainer="collapse__container" visibleSection="about" />{" "}
     </div>
   );
 };
