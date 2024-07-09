@@ -1,5 +1,12 @@
-$main-color: #ff6060;
 $main-font: "Montserrat", sans-serif;
+$main-color: #ff6060;
+$main-font-color: black;
+$special-font-color: white;
+$main-background-color: white;
+$special-background-color: #f6f6f6;
+$footer-background-color: black;
+$inactive-star-color: #e3e3e3;
+
 @mixin text($size, $weight, $color, $deco, $font) {
   color: $color;
   font-size: $size;

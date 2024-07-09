@@ -2,7 +2,8 @@ import React from "react";
 import Banner from "../components/Banner";
 import Collapse from "../components/Collapse";
 import Mountain from "../assets/Banner_2.png";
-const About = () => {
+
+function About() {
   return (
     <div>
       <Banner
@@ -15,6 +16,6 @@ const About = () => {
       <Collapse classContainer="collapse__container" visibleSection="about" />{" "}
     </div>
   );
-};
+}
 
 export default About;

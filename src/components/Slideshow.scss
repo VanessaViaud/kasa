@@ -1,7 +1,15 @@
 @import "../components/mixins";
+$slide-height: 415px;
+$slide-border-radius: 25px;
+$slide-mobil-height: 255px;
+$slide-mobil-border-radius: 10px;
+$arrow-font-size: 79px;
+$arrow-mobil-font-size: 20px;
+$button-border-background-color: transparent;
+
 .slideshow {
   width: 100%;
-  height: 415px;
+  height: $slide-height;
   display: flex;
   padding: 0 100px 0 100px;
   box-sizing: border-box;
@@ -9,7 +17,7 @@
   &__img {
     width: 100%;
     height: 100%;
-    border-radius: 25px;
+    border-radius: $slide-border-radius;
     object-fit: cover;
   }
   &__counter {
@@ -18,14 +26,14 @@
     align-items: end;
     justify-content: center;
     width: 1240px;
-    height: 415px;
+    height: $slide-height;
     padding-bottom: 25px;
     box-sizing: border-box;
-    @include text(18px, 500, white, none, $main-font);
+    @include text(18px, 500, $special-font-color, none, $main-font);
   }
   &__nav {
     position: absolute;
-    height: 415px;
+    height: $slide-height;
     width: 1240px;
 
     display: flex;
@@ -37,35 +45,42 @@
   }
 }
 .slideshow__nav button {
-  border-color: transparent;
-  background-color: transparent;
-  color: white;
+  border-color: $button-border-background-color;
+  background-color: $button-border-background-color;
+  color: $special-font-color;
   cursor: pointer;
   padding: 0;
   margin: 0;
   border: 0;
 }
-
+#slideshow__nav--prev {
+  font-size: $arrow-font-size;
+  padding-left: 23px;
+}
+#slideshow__nav--next {
+  font-size: $arrow-font-size;
+}
 @media screen and (max-width: 375px) {
   .slideshow {
-    height: 255px;
+    height: $slide-mobil-height;
     padding: 0 20px 0 20px;
 
     &__img {
-      border-radius: 10px;
+      border-radius: $slide-mobil-border-radius;
     }
     &__counter {
       display: none;
     }
     &__nav {
       width: 335px;
-      height: 255px;
-      &--desktop {
-        display: none;
-      }
-      &--mobil {
-        display: flex;
-      }
+      height: $slide-mobil-height;
     }
+  }
+  #slideshow__nav--prev {
+    font-size: $arrow-mobil-font-size;
+    padding-left: 6px;
+  }
+  #slideshow__nav--next {
+    font-size: $arrow-mobil-font-size;
   }
 }

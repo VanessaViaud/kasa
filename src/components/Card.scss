@@ -1,6 +1,5 @@
 @import "../components/mixins";
-/* variables desktop */
-$card-background-color: #f6f6f6;
+
 $card-border-radius: 25px;
 $card-padding: 56px 50px 43px 50px;
 $card-margin-x: 100px;
@@ -12,14 +11,13 @@ $card-title-background: linear-gradient(
   rgba(4, 4, 4, 0.2),
   rgba(0, 0, 0, 0.5)
 );
-$card-title-text-color: white;
 $card-title-text-size: 18px;
 $card-title-text-weight: 700;
 $card-item-border-radius: 10px;
 
 .card {
   border-radius: $card-border-radius;
-  background-color: $card-background-color;
+  background-color: $special-background-color;
   padding: $card-padding;
   margin-left: $card-margin-x;
   margin-right: $card-margin-x;
@@ -70,7 +68,7 @@ $card-item-border-radius: 10px;
     @include text(
       $card-title-text-size,
       $card-title-text-weight,
-      $card-title-text-color,
+      $special-font-color,
       none,
       $main-font
     );
@@ -84,7 +82,7 @@ $card-item-border-radius: 10px;
   .card {
     padding: 0;
     margin: 22px 22px 22px 22px;
-    background-color: white;
+    background-color: $main-background-color;
     display: flex;
     flex-direction: column;
     gap: 22px;

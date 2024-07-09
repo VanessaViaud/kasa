@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import "../components/Slideshow.scss";
-import Icon from "@mdi/react";
-import { mdiChevronRight } from "@mdi/js";
-import { mdiChevronLeft } from "@mdi/js";
+import { ArrowForwardIos, ArrowBackIos } from "@mui/icons-material";
 
 function Slideshow({ slides }) {
   const [currentIndex, setCurrentIndex] = useState(0);
@@ -31,28 +29,10 @@ function Slideshow({ slides }) {
           </div>
           <div className="slideshow__nav">
             <button onClick={prevSlide}>
-              <Icon
-                className="slideshow__nav--desktop"
-                path={mdiChevronLeft}
-                size={5}
-              />
-              <Icon
-                className="slideshow__nav--mobil"
-                path={mdiChevronLeft}
-                size={1.5}
-              />
+              <ArrowBackIos id="slideshow__nav--prev" />
             </button>
             <button onClick={nextSlide}>
-              <Icon
-                className="slideshow__nav--desktop"
-                path={mdiChevronRight}
-                size={5}
-              />
-              <Icon
-                className="slideshow__nav--mobil"
-                path={mdiChevronRight}
-                size={1.5}
-              />
+              <ArrowForwardIos id="slideshow__nav--next" />
             </button>
           </div>
         </>

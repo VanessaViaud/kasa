@@ -16,8 +16,6 @@ function Card() {
         {logements.map((logement) => (
           <li className="card__item" key={logement.id}>
             <Link to={`/logements/${logement.id}`}>
-              {" "}
-              {/* Mettre à jour le chemin */}
               <img
                 className="card__img"
                 src={logement.cover}

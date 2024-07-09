@@ -3,7 +3,7 @@ import Banner from "../components/Banner.js";
 import Card from "../components/Card.js";
 import Cliff from "../assets/Banner_1.png";
 
-const Home = () => {
+function Home() {
   return (
     <div>
       <Banner
@@ -17,6 +17,6 @@ const Home = () => {
       <Card />
     </div>
   );
-};
+}
 
 export default Home;

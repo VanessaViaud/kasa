@@ -1,24 +1,21 @@
 @import "../components/mixins";
 
-.star-rating {
+.rating {
   display: flex;
   gap: 15px;
-}
-
-.star {
-  font-size: 24px;
-  color: #e3e3e3;
-}
-
-.star.filled {
-  color: $main-color;
+  &__star {
+    font-size: 24px;
+    color: $inactive-star-color;
+    &.filled {
+      color: $main-color;
+    }
+  }
 }
 @media screen and (max-width: 375px) {
-  .star-rating {
+  .rating {
     gap: 7px;
-  }
-
-  .star {
-    font-size: 13px;
+    &__star {
+      font-size: 13px;
+    }
   }
 }

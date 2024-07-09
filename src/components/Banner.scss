@@ -1,11 +1,19 @@
 @import "../components/mixins";
+$img-border-radius: 25px;
+$img-height: 223px;
+$img-width: 100%;
+$img-mobil-border-radius: 10px;
+$img-mobil-height: 111px;
+$text-align: center;
+$mobil-text-align: left;
+
 .banner {
   padding: 0 100px 0 100px;
   display: flex;
-  justify-content: center;
+  justify-content: $text-align;
   align-items: center;
   &__text {
-    @include text(48px, 700, white, none, $main-font);
+    @include text(48px, 700, $special-font-color, none, $main-font);
     z-index: 200;
     position: absolute;
     text-shadow: 1px 1px 0 #000, -1px -1px 0 #000, 1px -1px 0 #000,
@@ -14,9 +22,9 @@
   &__img {
     object-fit: cover;
     z-index: 100;
-    width: 100%;
-    border-radius: 25px;
-    height: 223px;
+    width: $img-width;
+    border-radius: $img-border-radius;
+    height: $img-height;
     &--cliff {
       filter: brightness(40%);
       box-shadow: 0px 4px 4px 0px rgba(0, 0, 0, 0.25);
@@ -35,15 +43,15 @@
     justify-content: start;
     align-items: center;
     &__text {
-      @include text(24px, 700, white, none, $main-font);
+      @include text(24px, 700, $special-font-color, none, $main-font);
       text-shadow: none;
       width: 225px;
       padding-left: 16px;
-      text-align: left;
+      text-align: $mobil-text-align;
     }
     &__img {
-      height: 111px;
-      border-radius: 10px;
+      height: $img-mobil-height;
+      border-radius: $img-mobil-border-radius;
       &--cliff {
         box-shadow: none;
       }

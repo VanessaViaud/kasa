@@ -1,11 +1,27 @@
 @import "../components/mixins";
+$title-line-height: 52px;
+$location-line-height: 26px;
+$main-padding: 30px 100px 23px 100px;
+$tags-height: 25px;
+$tags-width: 115px;
+$tags-border-radius: 10px;
+$tags-mobil-height: 18px;
+$tags-mobil-width: 84px;
+$tags-mobil-border-radius: 5px;
+$host-gap: 10px;
+$host-picture-width: 64px;
+$host-picture-height: 64px;
+$host-picture-border-radius: 50%;
+$host-mobil-picture-width: 32px;
+$host-mobil-picture-height: 32px;
+
 .fiche-logement {
   display: flex;
   flex-direction: row;
   justify-content: space-between;
-  padding: 50px 100px 75px 100px;
+  padding: $main-padding;
   box-sizing: border-box;
-  background-color: white;
+  background-color: $main-background-color;
   position: relative;
   &__left,
   &__right {
@@ -17,23 +33,25 @@
 
   &__title {
     @include text(36px, 500, $main-color, none, $main-font);
-    line-height: 52px;
+    line-height: $title-line-height;
+    margin: 0px;
   }
   &__location {
-    @include text(18px, 500, black, none, $main-font);
-    line-height: 26px;
+    @include text(18px, 500, $main-font-color, none, $main-font);
+    line-height: $location-line-height;
+    margin: 0px;
   }
   &__tags {
-    @include text(14px, 700, white, none, $main-font);
+    @include text(14px, 700, $special-font-color, none, $main-font);
     display: flex;
     gap: 10px;
     flex-direction: row;
 
     &__ind {
       background-color: $main-color;
-      border-radius: 10px;
-      height: 25px;
-      min-width: 115px;
+      border-radius: $tags-border-radius;
+      height: $tags-height;
+      min-width: $tags-width;
       margin: 20px 0 20px 0;
       display: flex;
       justify-content: center;
@@ -45,7 +63,7 @@
     flex-direction: row;
     justify-content: end;
     max-width: 195px;
-    gap: 10px;
+    gap: $host-gap;
     &__name {
       @include text(18px, 500, $main-color, none, $main-font);
       display: flex;
@@ -54,9 +72,9 @@
       justify-content: center;
     }
     &__picture {
-      width: 64px;
-      height: 64px;
-      border-radius: 50%;
+      width: $host-picture-width;
+      height: $host-picture-height;
+      border-radius: $host-picture-border-radius;
     }
   }
 }
@@ -80,20 +98,20 @@
       line-height: 26px;
     }
     &__location {
-      @include text(14px, 500, black, none, $main-font);
+      @include text(14px, 500, $main-font-color, none, $main-font);
       line-height: 20px;
       text-align: left;
     }
     &__tags {
-      @include text(10px, 700, white, none, $main-font);
+      @include text(10px, 700, $special-font-color, none, $main-font);
       display: flex;
       flex-wrap: wrap;
       gap: 0;
       &__ind {
         margin: 10px 10px 0px 0;
-        height: 18px;
-        min-width: 84px;
-        border-radius: 5px;
+        height: $tags-mobil-height;
+        min-width: $tags-mobil-width;
+        border-radius: $tags-mobil-border-radius;
       }
     }
     &__rating {
@@ -102,13 +120,12 @@
     }
     &__host {
       max-width: 135px;
-      gap: 10px;
       &__name {
         @include text(12px, 500, $main-color, none, $main-font);
       }
       &__picture {
-        width: 32px;
-        height: 32px;
+        width: $host-mobil-picture-width;
+        height: $host-mobil-picture-height;
       }
     }
   }

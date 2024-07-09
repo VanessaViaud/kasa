@@ -1,6 +1,6 @@
 import React, { useState } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import data from "../datas/About.json";
+import data from "../datas/about.json";
 import { useNavigate } from "react-router-dom";
 import "../components/Collapse.scss";
 
